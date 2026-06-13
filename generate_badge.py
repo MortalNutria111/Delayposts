@@ -3,7 +3,7 @@ from zoneinfo import ZoneInfo
 
 # ========== 可配置区域 ==========
 # 上次更新日期，格式：年-月-日（北京时间）
-LAST_UPDATE_DATE = "2025-01-20"
+LAST_UPDATE_DATE = "2026-03-03"
 # 左侧标签文字
 LABEL_TEXT = "拖更天数"
 # 天数后缀
