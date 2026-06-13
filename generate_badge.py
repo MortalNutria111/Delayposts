@@ -77,6 +77,49 @@ print("badge.svg 已成功生成")        font-size="{FONT_SIZE}"
 
 # 保存为图片文件
 with open("badge.svg", "w", encoding="utf-8") as f:
+    f.write(svg_content)  <linearGradient id="s" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="r">
+    <rect width="96" height="20" rx="3"/>
+  </clipPath>
+  <g clip-path="url(#r)">
+    <rect width="55" height="20" fill="{LEFT_BG_COLOR}"/>
+    <rect x="55" width="41" height="20" fill="{RIGHT_BG_COLOR}"/>
+    <rect width="96" height="20" fill="url(#s)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+    <g transform="scale(.1)">
+      <g aria-hidden="true" fill="#010101">
+        <text x="285" y="150" fill-opacity=".8" filter="url(#blur)" textLength="450">{LABEL_TEXT}</text>
+        <text x="285" y="150" fill-opacity=".3" textLength="450">{LABEL_TEXT}</text>
+      </g>
+      <text x="285" y="140" textLength="450">{LABEL_TEXT}</text>
+    </g>
+    <g transform="scale(.1)">
+      <g aria-hidden="true" fill="#010101">
+        <text x="745" y="150" fill-opacity=".8" filter="url(#blur)" textLength="310">{right_text}</text>
+        <text x="745" y="150" fill-opacity=".3" textLength="310">{right_text}</text>
+      </g>
+      <text x="745" y="140" textLength="310">{right_text}</text>
+    </g>
+  </g>
+</svg>'''
+
+# 保存为图片文件
+with open("badge.svg", "w", encoding="utf-8") as f:
+    f.write(svg_content)
+
+print("badge.svg 已成功生成")        font-size="{FONT_SIZE}" 
+        fill="{TEXT_COLOR}" 
+        text-anchor="middle">
+    {display_text}
+  </text>
+</svg>'''
+
+# 保存为图片文件
+with open("badge.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)        font-size="{FONT_SIZE}" 
         fill="{TEXT_COLOR}" 
         text-anchor="middle">
